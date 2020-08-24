@@ -14,7 +14,7 @@ $dados = file($arquivo_tmp);
 //var_dump($dados);
 
 $wpdb->insert(
-    $wpdb->prefix."log-plugin,
+    $wpdb->prefix."log_plugins,
     array(
         'datas' => $data,
         'messagem' => $mensagem,
@@ -25,7 +25,7 @@ $wpdb->insert(
     )
 )";
 $_SESSION['msg'] = "<p style='color: green;'>Importação dos dados com sucesso!</p>";
-header("Location: index.php");
+header("Location: menu_plugin.php");
 
 
 

@@ -1,8 +1,8 @@
 <?php
  function w_log_rsm_menu_page(){
     add_menu_page( 
-        "Visualizar Logs", 
-        "Visualizar Logs", 
+        "Salvar Logs", 
+        "Salvar Logs", 
         'manage_options', 
         'write-log-rsm', 
         'w_write_page_view', // abaixo criada 
@@ -11,7 +11,7 @@
     ); 
     //criar submenus
     //log de envio
-    
+   /* 
     add_submenu_page( 
         'pgl-exportador-leroy', 
         'Log de Envio', 
@@ -19,6 +19,7 @@
         'manage_options', 
         'log-export-loroy-sub', 
         'pgl_log_submenu_view', null );
+        */
     
 }
 add_action( 'admin_menu', 'w_log_rsm_menu_page', true );

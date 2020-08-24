@@ -5,10 +5,10 @@ function w_log_rsm_install(){
 
     $charset_collate = $wpdb->get_charset_collate();
 
-    $sql = "CREATE TABLE IF NOT EXISTS ".$wpdb->prefix."log_plugin (
+    $sql = "CREATE TABLE IF NOT EXISTS ".$wpdb->prefix."log_plugins (
     `ID` int(11) NOT NULL,
     `datas` datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-    `messagem` varchar(4000) NOT NULL
+    `messagem` TEXT NOT NULL
     ) ".$charset_collate.";";
     //$teste = $wpdb->query($sql);
  
